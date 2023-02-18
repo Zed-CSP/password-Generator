@@ -31,7 +31,6 @@ while (!(includeLowercase || includeUppercase || includeNumbers || includeSpecia
   includeSpecial = confirm("Include special characters?");
 }
 
-
 // set constant strings for each character type  
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -51,7 +50,26 @@ if (includeNumbers) {
   userCharacterSet += numeric;}
 if (includeSpecial) {
   userCharacterSet += special;}
-  
+
+// set empty string to store password
+let password = "";
+// for loop to generate password
+// i = 0 used to set initial value of i
+// i < passwordLength used to determine when to stop loop, passwordLength serves as the maximum length of password and will exit the loop.
+// i++ used to increment i by 1 after each loop
+for (let i = 0; i < passwordLength; i++) {
+  // math.random used to generate random number between 0 and 1
+  // math.random * userCharacterSet.length used to scale math.random's 0-1 to 0-userCharacterSet's length
+  // math.floor used to round down decimals to nearest integer
+  // .charAt used to select character at our now randomly indexed userCharacterSet's string
+  password += userCharacterSet.charAt(Math.floor(Math.random() * userCharacterSet.length));
+  console.log(password);
+}
+// console.log used to test password
+console.log(password);
+// return password
+return password;
+}
 
 // Write password to the #password input
 function writePassword() {
