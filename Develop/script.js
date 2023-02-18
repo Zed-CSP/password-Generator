@@ -38,8 +38,20 @@ const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numeric = "0123456789";
 const special = "!@#$%^&*";
 
+// set empty string to store user selected character types
+let userCharacterSet = "";
 
-}
+// if statements to add character types to userCharacterSet
+// += used to add to string
+if (includeLowercase) {
+  userCharacterSet += lowerCase;}
+if (includeUppercase) {
+  userCharacterSet += upperCase;}
+if (includeNumbers) {
+  userCharacterSet += numeric;}
+if (includeSpecial) {
+  userCharacterSet += special;}
+  
 
 // Write password to the #password input
 function writePassword() {
