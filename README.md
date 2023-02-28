@@ -1,7 +1,10 @@
 # JavaScript: Password Generator
-Created by Christopher Peret as a project for UC Berkley full stack course
+
+```
+Created by Christopher Peret as a project for UC Berkley full stack course.
 Password length, and character sets can be determined and added to an array. 
 Password generated with a random function and displayed for the user
+```
 
 ## User Story
 
@@ -29,6 +32,9 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
+## Screenshot
+
+![Password Generator](./assets/images/03-javascript-homework-demo.png)
 
 ## Review
 
