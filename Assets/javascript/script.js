@@ -88,4 +88,11 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+  //add copy to clipboard button
+  var copyBtn = document.createElement("button");
+  copyBtn.textContent = "Copy to Clipboard";
+  copyBtn.setAttribute("id", "copyBtn");
+  copyBtn.setAttribute("class", "btn btn-primary");
+  copyBtn.setAttribute("style", "margin-top: 10px");
+  document.getElementById("password").appendChild(copyBtn);
+  };
